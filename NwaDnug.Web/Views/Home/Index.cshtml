@@ -1,0 +1,130 @@
+﻿@model HomeViewModel
+@{
+    ViewBag.Title = "NWADNUG: Home";
+}
+<!-- start content -->
+<div id="content">
+    <div class="post">
+        <h1 class="title">
+            Northwest Arkansas .NET User Group</h1>
+        <div class="entry">
+            <p>
+                The Northwest Arkansas .NET User Group is a non-profit organization that is dedicated
+                to the promotion, education, and adoption of Microsoft .NET Technologies. We strive
+                to provide an environment for professionals to network in Northwest Arkansas to
+                foster the free exchange of ideas and information.</p>
+            <p>
+                We hold monthly meetings that have presentations that allow you to keep up to date
+                on the latest emerging .NET technologies as well as providing practical skills you
+                can apply immediately.</p>
+        </div>
+    </div>
+    <div class="post">
+        <h1 class="title">
+            Monthly Meetings</h1>
+        <div class="entry">
+            <p>
+                The Northwest Arkansas .Net Users Group meets the 2nd Tuesday of every month.
+            </p>
+            <p>
+                <span style="color: #5fab2a; font-weight: bold">NEW MEETING LOCATION:</span><br />
+                Rockfish Interactive<br />
+                3100 Market St., Suite 100<br />
+                Rogers, AR 72758<br />
+                <a href="http://g.co/maps/36j3h" target="_blank">View Google Map</a>&nbsp;|&nbsp;
+                <a href="http://binged.it/JC5pFb" target="_blank">View Bing Map</a><br />
+                (Use main lobby doors in center of building)
+            </p>
+            <p>
+                <b>Agenda</b><br />
+                <br />
+                6:00 PM - 6:15 PM - Welcome and News, Sign-in and Food
+                <br />
+                6:15 PM - 8:15 PM - Main &amp; Lightning Presentations
+                <br />
+                8:15 PM - 8:30 PM - Closing and Prize give-a-ways</p>
+        </div>
+    </div>
+</div>
+<!-- end content -->
+<!-- start sidebar one -->
+<div id="sidebar1" class="sidebar">
+    @*<ul>
+            <li id="recent-posts">
+                <h2>
+                    Upcoming Meetings</h2>
+                <ul>
+                    @foreach (var item in ViewData.Model.Meetings)
+                        {
+                            string url = item.Url;
+                            string title = item.Title;
+                            string presenter = item.Presenter;
+                            string when = item.Date.ToLongDateString();
+                            @string.Format("<li><h3>{3}</h3><p><b>{1}</b><br />Presented by {2}<br /><br /><a href=\"{0}\">More Information </a></p></li>", url, title, presenter, when);
+                        }
+                </ul>
+            </li>
+        </ul>*@
+    <ul>
+        <li id="recent-posts">
+            <h2>
+                Upcoming Events</h2>
+            <ul>
+                @foreach (var item in Model.Events)
+                {
+                    <li>
+                        <h3>@item.Date</h3>
+                        <p>
+                            <b>@item.Title</b><br />
+                            <a href="@item.Url">More Information </a>
+                        </p>
+                    </li>
+                }
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- end sidebar one -->
+<!-- start sidebar two -->
+<div id="sidebar2" class="sidebar">
+    <br />
+    <ul>
+        <li>
+            <h2>
+                Upcoming Meetings</h2>
+            <ul>
+                @foreach (var item in Model.Meetings)
+                {
+                    <li><a href="@item.Url">@item.Title</a></li>
+                }
+            </ul>
+        </li>
+        <li><a href="http://feeds.feedburner.com/nwadnug">
+            <img src="http://feeds.feedburner.com/~fc/nwadnug?bg=00CC33&amp;fg=444444&amp;anim=0"
+                height="26" width="88" style="border: 0" alt="" /></a> </li>
+        <li>
+            <br />
+            <h2>
+                Platinum Sponsors</h2>
+            <a href="http://microsoft.com/">
+                <img src="content/images/sponsor-microsoft.gif" border="0" alt="Microsoft" /></a><br />
+            <br />
+            <a href="http://ineta.org/">
+                <img src="content/images/sponsor-ineta.gif" border="0" alt="INETA" /></a><br />
+            <br />
+            <a href="http://www.teksystems.com/">
+                <img src="content/images/sponsor-teksystems.gif" border="0" alt="Tek Systems" /></a>
+        </li>
+    </ul>
+</div>
+<!-- end sidebar two -->
+<div style="clear: both;">
+    &nbsp;</div>
+@section ScriptContent
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#menu>ul>li:nth-child(1)").addClass("current_page_item");
+        });
+    </script>
+}
