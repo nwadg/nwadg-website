@@ -1,0 +1,327 @@
+﻿body {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a, a:hover, a:visited {
+    color: #60b823;
+}
+
+.body-content {
+    padding-bottom: 30px;
+    background-color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer {
+    height: 30px;
+    font-size: 11px;
+    background-color: #000;
+}
+
+.copyright {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    background: url(images/menu_bkgrd.jpg) repeat-x top left;
+    height: 60px;
+}
+
+.header {
+    height: 261px;
+    background: url(images/logo_bkgrd.jpg) repeat-x top left;
+}
+
+.nav {
+    margin-left: 20px;
+}
+
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #2b540f;
+    }
+
+.navbar-nav li {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: #60b823 1px solid;
+}
+
+.navbar-nav > li > a {
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 12px;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #2b540f;
+}
+
+.navbar-nav .last {
+    border-right: #60b823 1px solid;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+/* Logo */
+#logo {
+    height: 261px;
+    margin: 47px auto 47px auto;
+    background: url(images/nwadg_logo.png) no-repeat left top;
+}
+
+@media (min-width: 768px) {
+    #logo {
+        width: 750px;
+    }
+
+    /*footer {
+        width: 750px;
+    }*/
+}
+
+@media (min-width: 992px) {
+    #logo {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #logo {
+        width: 1170px;
+    }
+}
+
+@media (max-width: 767px) {
+    a.navbar-brand {
+        display: block;
+        color: #ffffff;
+    }
+
+        a.navbar-brand:hover {
+            display: block;
+            color: #ffff00;
+        }
+
+    .nav {
+        margin: 0;
+    }
+
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: #2b540f;
+    }
+
+    .navbar-nav li {
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        border-top: #60b823 1px solid;
+        background: url(images/menu_bkgrd.jpg) repeat-x top left;
+    }
+
+    .navbar-nav .last {
+        border-bottom: #60b823 1px solid;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        height: 60px;
+        background: inherit;
+    }
+
+    #logo {
+        display: none;
+    }
+}
+
+.navbar-toggle {
+    border-color: #60b823;
+}
+
+    .navbar-toggle .icon-bar {
+        background-color: #2b540f;
+        border-color: #60b823;
+    }
+
+#homeContent > div > #events {
+    padding: 5px 10px;
+    margin-top: 20px;
+    background-color: #F2F2F2;
+}
+
+#homeContent > div > #sponsors {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+    #homeContent > div > h3,
+    #homeContent > div > h5,
+    #homeContent > div > #events > h5,
+    #homeContent > div > #sponsors > h5 {
+        color: #5fab2a;
+    }
+
+    #homeContent > div > h5,
+    #homeContent > div > #events > h5,
+    #homeContent > div > #sponsors > h5 {
+        padding: 5px;
+        font-weight: bold;
+    }
+
+#homeContent > div > hr {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#connectContent {
+    margin-bottom: 20px;
+}
+
+    #connectContent > div > h3,
+    #connectContent > div > h5,
+    #connectContent > div > #connectWithUs > h5 {
+        color: #5fab2a;
+    }
+
+    #connectContent > div > h5,
+    #connectContent > div > #connectWithUs > h5 {
+        font-weight: bold;
+    }
+
+    #connectContent > div > hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #connectContent > div > #connectWithUs {
+        margin-top: 35px;
+    }
+
+        #connectContent > div > #connectWithUs div {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+#learnContent {
+    margin-bottom: 20px;
+}
+
+    #learnContent > div > h3,
+    #learnContent > div > h5 {
+        color: #5fab2a;
+    }
+
+    #learnContent > div > h5 {
+        font-weight: bold;
+    }
+
+    #learnContent > div > hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+#teachContent {
+    margin-bottom: 20px;
+}
+
+    #teachContent > div > h3,
+    #teachContent > div > h5 {
+        color: #5fab2a;
+    }
+
+    #teachContent > div > h5 {
+        font-weight: bold;
+    }
+
+    #teachContent > div > hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+#sponsorContent {
+    margin-bottom: 20px;
+}
+
+    #sponsorContent > div > h3,
+    #sponsorContent > div > h5 {
+        color: #5fab2a;
+    }
+
+    #sponsorContent > div > h5 {
+        font-weight: bold;
+    }
+
+    #sponsorContent > div > hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+#aboutContent {
+    margin-bottom: 20px;
+}
+
+    #aboutContent > div > h3,
+    #aboutContent > div > h5 {
+        color: #5fab2a;
+    }
+
+    #aboutContent > div > h5 {
+        font-weight: bold;
+    }
+
+    #aboutContent > div > hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}

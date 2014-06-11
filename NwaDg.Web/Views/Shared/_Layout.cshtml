@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="DESCRIPTION" content="Northwest Arkansas Developers Group" />
+    <meta name="KEYWORDS" content="Developers, .NET, Dot Net, ASP.NET, Microsoft, Arkansas, User Group, Fayetteville, Springdale, Lowell, Bentonville, Rogers, Joplin, Missouri, Fort Smith, C#, vb.net" />
+    <meta name="COPYRIGHT" content="Copyright @DateTime.Now.Year by Northwest Arkansas Developers Group" />
+    <meta name="AUTHOR" content="Northwest Arkansas Developers Group" />
+    <meta name="DISTRIBUTION" content="GLOBAL" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <meta name="REVISIT-AFTER" content="1 DAYS" />
+    <meta name="RATING" content="GENERAL" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="header">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("NWA Developers Group", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Connect", "Index", "Connect", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Learn", "Index", "Learn", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Teach", "Index", "Teach", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Sponsors", "Index", "Sponsors", new { area = "" }, null)</li>
+                        <li class="last">@Html.ActionLink("About", "Index", "About", new { area = "" }, null)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="logo"></div>
+    </div>
+    <div class="body-content">
+        <div class="container">
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <footer class="navbar-fixed-bottom">
+        <div class="copyright">Copyright &copy; @DateTime.Now.Year Northwest Arkansas Developers Group</div>
+    </footer>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-3010739-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
