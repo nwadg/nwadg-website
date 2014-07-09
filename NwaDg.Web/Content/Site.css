@@ -164,10 +164,15 @@ footer {
     }
 
 #homeContent > div > #events {
-    padding: 5px 10px;
+    /*padding: 5px 10px;*/
     margin-top: 20px;
-    background-color: #F2F2F2;
 }
+
+    #homeContent > div > #events h5,
+    #homeContent > div > #sponsors h5 {
+        background-color: #2b540f;
+        color: #ffffff;
+    }
 
 #homeContent > div > #sponsors {
     margin-top: 35px;
@@ -175,9 +180,7 @@ footer {
 }
 
     #homeContent > div > h3,
-    #homeContent > div > h5,
-    #homeContent > div > #events > h5,
-    #homeContent > div > #sponsors > h5 {
+    #homeContent > div > h5 {
         color: #5fab2a;
     }
 
@@ -324,4 +327,8 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+
+#sponsorLogos img {
+    margin: 5px;
 }
